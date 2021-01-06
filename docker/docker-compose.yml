@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+
+  goods-calc-db:
+    container_name: postgres-goods-calc
+    image: postgres:12.3
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: goods
+    volumes:
+      - ./pgdata/:/var/lib/postgresql/data/
